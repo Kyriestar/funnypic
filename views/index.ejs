@@ -12,8 +12,8 @@
     	.header{
 			text-align: center;
 			background-color: yellow;
-			height: 70px;
-			width: 70%;
+			height: 100px;
+			width: 80%;
 			margin-bottom: 10px;
 			border-radius: 5px;
 			margin: auto;
@@ -48,18 +48,17 @@
   </head>
   <body style="background-color: #000">
     <!-- <p>Welcome to <%= data.urls[1] %></p> -->
-	<div class="container" style="margin-top: 25px">
+    <nav class="navbar navbar-default navbar-fixed-top header">
+      <div class="container">
+        <p>FUNNY</p>
+      </div>
+    </nav>
+	<div class="container" style="margin-top: 50px">
 		<!-- <div class="row">
 		  <div class="col-md-12 header">
 			<p>FUNNY</p>
 		  </div>
 		</div> -->
-		<nav class="navbar navbar-default navbar-fixed-top header">
-		  <div class="container">
-		    <p>FUNNY</p>
-		  </div>
-		</nav>
-
 		<%
 			for(var i=0; i<data.urls.length; i++){
 	    %>
