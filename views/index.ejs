@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>clx</title>
+    <title>Funnyppppp</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -21,19 +21,19 @@
     	.header p{
 			font-size: 40px;
 			font-weight: 600;
-			font-family: Helvetica;
+			font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
             letter-spacing: 30px;
 			margin-top: 5px;
 			color: #000;
     	}
     	.imagecontainer{
-    		width: 600px;
-    		height: 600px;
-    		margin: 0px auto 10px auto;
-    		border-color: #C0C0C0;
-    		border-width: 1px;
+    		width: 500px;
+    		height: 500px;
+    		margin: 0px 5px 10px 5px;
+    		border-color: #FFFFFF;
+    		border-width: 6px;
     		border-style: solid;
-    		border-radius: 5px;
+    		border-radius: 8px;
     		background-color: #fff;
     	}
     	/*.container{
@@ -50,20 +50,39 @@
   <body style="background-color: #000">
     <nav class="navbar navbar-default navbar-fixed-top header">
       <div class="container">
-        <p>FUNNY</p>
+        <p>方妮皮车</p>
       </div>
     </nav>
 	<div class="container" style="margin-top: 50px">
-		<%
-			for(var i=0; i<data.arr.length; i++){
-            var url = 'http://39.106.30.113:8888/images/images2018519/'+ data.arr[i];
-	    %>
-			<div class='imagecontainer'>	
-			    <img id='img<%= i %>' src='http://39.106.30.113:8888/images/images2018519/<%= data.arr[i] %>' />
-		    </div>
-	    <%
-			}	
-	    %>
+        <table style="margin: 0 auto;border-spacing:20px;">
+            <tr>
+                <td >
+                    <%
+                        for(var i=0; i<data.arr.length/2; i++){
+                        
+                    %>
+                        <div class='imagecontainer'>    
+                            <img id='img<%= i %>' src='http://39.106.30.113:8888/images/images2018519/<%= data.arr[i] %>' />
+                        </div>
+                    <%
+                        }   
+                    %>
+                </td>
+                <td >
+                    <%
+                        for(var i=parseInt(data.arr.length/2); i<data.arr.length; i++){
+                        var url = 'http://39.106.30.113:8888/images/images2018519/'+ data.arr[i];
+                    %>
+                        <div class='imagecontainer'>    
+                            <img id='img<%= i %>' src='http://39.106.30.113:8888/images/images2018519/<%= data.arr[i] %>' />
+                        </div>
+                    <%
+                        }   
+                    %>
+                </td>
+            </tr>
+        </table>
+		
 	</div>
   </body>
   <script
