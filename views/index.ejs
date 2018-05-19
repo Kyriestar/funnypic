@@ -12,23 +12,23 @@
     	.header{
 			text-align: center;
 			background-color: yellow;
-			height: 100px;
-			width: 95%;
+			height: 80px;
+			width: 80%;
 			margin-bottom: 10px;
 			border-radius: 5px;
 			margin: auto;
     	}
     	.header p{
-			font-size: 80px;
+			font-size: 40px;
 			font-weight: 600;
-			font-family: fantasy;
+			font-family: Helvetica;
             letter-spacing: 30px;
 			margin-top: 5px;
 			color: #000;
     	}
     	.imagecontainer{
-    		width: 700px;
-    		height: 700px;
+    		width: 600px;
+    		height: 600px;
     		margin: 0px auto 10px auto;
     		border-color: #C0C0C0;
     		border-width: 1px;
@@ -48,23 +48,18 @@
     </style>
   </head>
   <body style="background-color: #000">
-    <!-- <p>Welcome to <%= data.urls[1] %></p> -->
     <nav class="navbar navbar-default navbar-fixed-top header">
       <div class="container">
         <p>FUNNY</p>
       </div>
     </nav>
 	<div class="container" style="margin-top: 50px">
-		<!-- <div class="row">
-		  <div class="col-md-12 header">
-			<p>FUNNY</p>
-		  </div>
-		</div> -->
 		<%
-			for(var i=0; i<data.urls.length; i++){
+			for(var i=0; i<data.arr.length; i++){
+            var url = 'http://39.106.30.113:8888/images/images2018519/'+ data.arr[i];
 	    %>
 			<div class='imagecontainer'>	
-			    <img id='img<%= i %>' src=<%= data.urls[i] %> />
+			    <img id='img<%= i %>' src='http://39.106.30.113:8888/images/images2018519/<%= data.arr[i] %>' />
 		    </div>
 	    <%
 			}	
